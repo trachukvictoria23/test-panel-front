@@ -1,0 +1,59 @@
+.auth {
+  height         : 100vh;
+  display        : flex;
+  align-items    : center;
+  justify-content: center;
+}
+
+.auth-form {
+  display       : flex;
+  flex-direction: column;
+  align-items   : center;
+  width         : 512px;
+  max-width     : 90%;
+  gap           : 8px;
+  margin        : 0 auto;
+  padding       : 32px 20px;
+  background    : $button-background;
+  border        : 1px solid $form-border-color;
+  border-radius : $card-border-radius;
+
+  a {
+    color: $color-violet;
+  }
+
+  .app-input {
+    border-color: $form-border-color;
+  }
+
+  .app-button {
+    background: $color-violet;
+    color     : white;
+
+    &:hover {
+      // background: transparent;
+      opacity      : 0.85;
+      // color     : $default-text-color;
+    }
+  }
+
+  &__row {
+    width: 75%;
+  }
+
+  &__buttons {
+    display       : flex;
+    flex-direction: column;
+  }
+
+  &__subheading {
+    margin-bottom: 10px;
+    width        : 75%;
+
+
+  }
+
+  &-request {
+    grid-gap: 40px;
+  }
+}

@@ -1,0 +1,192 @@
+* {
+    // font-family: 'Roboto Flex', sans-serif;
+    box-sizing : border-box;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+}
+
+html,
+body,
+p,
+h1,
+h2,
+h3 {
+    margin: 0;
+}
+
+h1,
+h2,
+h3 {
+    font-weight: 600;
+}
+
+body {
+    font-size: 16px;
+}
+
+.fz-sm {
+    font-size: 13px;
+}
+
+.ta-center {
+    text-align: center;
+}
+
+.rotate-180 {
+    transform: rotate(180deg);
+}
+
+.capitalize {
+    text-transform: capitalize;
+}
+
+.app-button {
+    background: $button-background;
+    padding   : 0 48px;
+    height    : 40px;
+    font-size : 16px;
+    border    : 1px solid $color-violet;
+    transition: all 0.1s;
+    border-radius: $default-border-radius;
+
+    &:hover:not(:disabled) {
+        cursor       : pointer;
+        background   : $color-violet;
+        // color     : $button-background;
+        color        : white;
+    }
+
+    &--danger {
+        background  : $color-delete;
+        border-color: $default-text-color;
+    }
+}
+
+.app__inner {
+    padding   : $app-padding;
+    min-height: calc(100vh - 90px - 64px);
+
+    &--full {
+        padding: 0;
+    }
+}
+
+.app-input {
+    // padding  : 8px;
+    padding      : 0 8px;
+    height       : 40px;
+    font-size    : 16px;
+    border       : 1px solid $default-border-color;
+    outline      : none;
+    border-radius: $default-border-radius;
+
+    &:focus {
+        border: 1px solid $dark-border-color;
+    }
+
+    &:disabled {
+        background: $color-disabled;
+        border    : 1px solid $dark-border-color;
+    }
+
+    &::placeholder {
+        font-size: 14px;
+    }
+
+    &__wrap {
+        display       : flex;
+        flex-direction: column;
+        position      : relative;
+
+        &:not(:first-child) {
+            padding-bottom: 20px;
+        }
+
+        label {
+            font-size: 13px;
+        }
+    }
+
+    &__icon {
+        position: absolute;
+        left    : 8px;
+        width   : 24px;
+        bottom  : 8px;
+
+        &-clear {
+            right : 8px;
+            left  : auto;
+            width : 16px;
+            bottom: 12px;
+            cursor: pointer;
+
+            &:hover {
+                opacity: 0.65;
+            }
+        }
+    }
+
+    &__error {
+        position : absolute;
+        bottom   : 0;
+        color    : $color-danger;
+        font-size: 13px;
+    }
+
+    &__change-button {
+        position  : absolute;
+        outline   : none;
+        border    : none;
+        background: transparent;
+        cursor    : pointer;
+        top       : 20px;
+        right     : 0;
+        transition: all 0.1s;
+
+        &:hover {
+            transform: scale(1.1);
+        }
+
+        img {
+            width : 26px;
+            height: 26px;
+        }
+    }
+
+}
+
+.app-modal {
+    width     : 512px;
+    max-width : 90%;
+    position  : relative;
+    left      : 50%;
+    top       : 50%;
+    transform : translate(-50%, -50%);
+    background: $card-background;
+
+    &__inner {
+        margin   : 0 !important;
+        width    : 100% !important;
+        max-width: 100% !important;
+    }
+
+    &__close {
+        position  : absolute;
+        right     : 10px;
+        top       : 14px;
+        background: none;
+        outline   : none;
+        border    : none;
+        cursor    : pointer;
+        transition: all 0.1s;
+
+        &:hover {
+            transform: scale(1.1);
+        }
+
+        img {
+            width : 22px;
+            height: 22px;
+        }
+    }
+}
